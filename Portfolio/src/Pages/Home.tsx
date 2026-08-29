@@ -57,14 +57,14 @@ export default function Home() {
                     </p>
 
                     <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
-                        <button className="flex items-center justify-center gap-2 rounded-xl bg-cyan-500 px-6 py-3 font-medium text-white transition hover:bg-cyan-600 sm:px-8">
+                        <a href="https://github.com/surya-jsdev" className="flex items-center justify-center gap-2 rounded-xl bg-cyan-500 px-6 py-3 font-medium text-white transition hover:bg-cyan-600 sm:px-8">
                             View Projects
                             <FaArrowRight />
-                        </button>
+                        </a>
 
-                        <button className="rounded-xl border border-cyan-400 px-6 py-3 font-medium text-cyan-300 transition hover:bg-cyan-500/10 sm:px-8">
+                        <a href="https://linkedin.com/in/surya-p-4ba4a9236" className="rounded-xl border border-cyan-400 px-6 py-3 font-medium text-cyan-300 transition hover:bg-cyan-500/10 sm:px-8">
                             Download Resume
-                        </button>
+                        </a>
                     </div>
 
                     <div className="mt-8 flex justify-center gap-5 text-2xl text-gray-200 sm:text-xl lg:justify-start">
