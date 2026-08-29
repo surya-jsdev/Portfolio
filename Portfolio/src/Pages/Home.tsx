@@ -7,137 +7,115 @@ import {
     SiMongodb,
 } from "react-icons/si";
 import { motion } from "framer-motion";
-import profileImage from "../assets/Img_01.jpg";
+import About from "./About";
+
+const profileImage = new URL("../assets/Img_01.jpg", import.meta.url).href;
 
 export default function Home() {
     return (
         <div className="min-h-screen bg-[#050816] text-white">
-
-            {/* Navbar */}
-            <nav className="fixed top-0 left-0 w-full bg-[#050816]/80 backdrop-blur-lg z-50 border-b border-gray-800">
-                <div className="max-w-7xl mx-auto flex justify-between items-center p-5">
-
-                    <h1 className="text-2xl font-bold text-cyan-400">
+            <nav className="fixed top-0 left-0 z-50 w-full border-b border-gray-800/80 bg-[#050816]/80 backdrop-blur-lg">
+                <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-4 sm:px-6 lg:px-8">
+                    <h1 className="text-xl font-bold text-cyan-400 sm:text-2xl">
                         {"</> Surya P"}
                     </h1>
 
-                    <ul className="hidden md:flex gap-8">
-                        <li><a href="#home" className="hover:text-cyan-400">Home</a></li>
-                        <li><a href="#about" className="hover:text-cyan-400">About</a></li>
-                        <li><a href="#projects" className="hover:text-cyan-400">Projects</a></li>
-                        <li><a href="#contact" className="hover:text-cyan-400">Contact</a></li>
+                    <ul className="flex items-center gap-3 overflow-x-auto text-sm text-gray-300 sm:gap-6 md:text-base">
+                        <li><a href="#home" className="transition hover:text-cyan-400">Home</a></li>
+                        <li><a href="#about" className="transition hover:text-cyan-400">About</a></li>
+                        <li><a href="#projects" className="transition hover:text-cyan-400">Projects</a></li>
+                        <li><a href="#contact" className="transition hover:text-cyan-400">Contact</a></li>
                     </ul>
-
-                    {/* <button className="bg-cyan-500 px-5 py-2 rounded-full hover:bg-cyan-600">
-                        Hire Me
-                    </button> */}
-
                 </div>
             </nav>
 
-            {/* Hero Section */}
-
             <section
                 id="home"
-                className="max-w-7xl mx-auto min-h-screen flex flex-col md:flex-row items-center justify-between px-6 pt-32"
+                className="mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center gap-12 px-4 pb-16 pt-28 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:gap-8 lg:px-8 lg:pt-32"
             >
-
                 <motion.div
                     initial={{ opacity: 0, x: -80 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: .8 }}
-                    className="flex-1"
+                    transition={{ duration: 0.8 }}
+                    className="w-full text-center lg:w-1/2 lg:text-left"
                 >
-
-                    <span className="bg-cyan-500/20 text-cyan-300 px-4 py-2 rounded-full">
+                    <span className="inline-block rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-sm font-medium text-cyan-300 sm:text-base">
                         👋 Hello I'm
                     </span>
 
-                    <h1 className="text-6xl font-extrabold mt-6 leading-tight">
+                    <h1 className="mt-6 text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
                         Surya P
                     </h1>
 
-                    <h2 className="text-3xl mt-3 text-cyan-400">
+                    <h2 className="mt-3 text-2xl text-cyan-400 sm:text-3xl">
                         Full Stack Developer
                     </h2>
 
-                    <p className="mt-6 text-gray-400 text-lg max-w-xl">
-                        I build beautiful, fast and scalable web applications
-                        using React, Angular, Node.js and MongoDB.
+                    <p className="mx-auto mt-6 max-w-xl text-base text-gray-400 sm:text-lg lg:mx-0">
+                        I build beautiful, fast and scalable web applications using React,
+                        Angular, Node.js and MongoDB.
                     </p>
 
-                    <div className="flex gap-5 mt-10">
-
-                        <button className="bg-cyan-500 px-8 py-3 rounded-xl flex items-center gap-2 hover:bg-cyan-600">
+                    <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
+                        <button className="flex items-center justify-center gap-2 rounded-xl bg-cyan-500 px-6 py-3 font-medium text-white transition hover:bg-cyan-600 sm:px-8">
                             View Projects
                             <FaArrowRight />
                         </button>
 
-                        <button className="border border-cyan-400 px-8 py-3 rounded-xl hover:bg-cyan-500/10">
+                        <button className="rounded-xl border border-cyan-400 px-6 py-3 font-medium text-cyan-300 transition hover:bg-cyan-500/10 sm:px-8">
                             Download Resume
                         </button>
-
                     </div>
 
-                    <div className="flex gap-5 text-3xl mt-10">
-
-                        <a href="#" className="hover:text-cyan-400 cursor-pointer">
+                    <div className="mt-8 flex justify-center gap-5 text-2xl text-gray-200 sm:text-3xl lg:justify-start">
+                        <a href="#" className="transition hover:text-cyan-400" aria-label="GitHub">
                             <FaGithub />
                         </a>
-
-                        <a href="#" className="hover:text-cyan-400 cursor-pointer">
+                        <a href="#" className="transition hover:text-cyan-400" aria-label="LinkedIn">
                             <FaLinkedin />
                         </a>
-
                     </div>
-
                 </motion.div>
 
-                {/* Right Side */}
-
                 <motion.div
-                    initial={{ opacity: 0, scale: .7 }}
+                    initial={{ opacity: 0, scale: 0.7 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1 }}
-                    className="flex-1 flex justify-center mt-20 md:mt-0"
+                    className="relative flex w-full justify-center lg:w-1/2"
                 >
-
-                    <div className="relative">
-
-                        <div className="w-80 h-80 rounded-full bg-linear-to-r from-cyan-500 to-purple-600 blur-3xl absolute"></div>
+                    <div className="relative flex items-center justify-center">
+                        <div className="absolute h-56 w-56 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 opacity-70 blur-3xl sm:h-72 sm:w-72"></div>
 
                         <img
                             src={profileImage}
                             alt="profile"
-                            className="relative w-90 h-105 m-15 rounded-full border-4 border-cyan-500"
+                            className="relative h-64 w-64 rounded-full border-4 border-cyan-500 object-cover shadow-[0_0_35px_rgba(34,211,238,0.35)] sm:h-80 sm:w-80 lg:h-[500px] lg:w-[420px]"
                         />
 
-                        <div className="absolute -left-6 top-7 Channing the I don't know. glass p-4 rounded-xl">
-                            <SiReact className="text-5xl text-cyan-400" />
+                        <div className="glass absolute -left-2 top-8 rounded-xl p-3 sm:-left-6 sm:top-10">
+                            <SiReact className="text-3xl text-cyan-400 sm:text-5xl" />
                         </div>
 
-                        <div className="absolute right-0 top-10 glass p-4 rounded-xl">
-                            <SiAngular className="text-5xl text-red-500" />
+                        <div className="glass absolute right-0 top-10 rounded-xl p-3 sm:right-2">
+                            <SiAngular className="text-3xl text-red-500 sm:text-5xl" />
                         </div>
 
-                        <div className="absolute -left-10 bottom-40  glass p-4 rounded-xl">
-                            <SiNodedotjs className="text-5xl text-green-500" />
+                        <div className="glass absolute -left-4 bottom-24 rounded-xl p-3 sm:-left-10 sm:bottom-28">
+                            <SiNodedotjs className="text-3xl text-green-500 sm:text-5xl" />
                         </div>
 
-                        <div className="absolute -right-7 bottom-40 glass p-4  rounded-xl">
-                            <SiTypescript className="text-5xl text-blue-500" />
+                        <div className="glass absolute -right-2 bottom-24 rounded-xl p-3 sm:-right-8 sm:bottom-28">
+                            <SiTypescript className="text-3xl text-blue-500 sm:text-5xl" />
                         </div>
 
-                        <div className="absolute -bottom-5 right-50 glass p-4 rounded-xl">
-                            <SiMongodb className="text-5xl text-green-400" />
+                        <div className=" absolute bottom-2 right-30 rounded-xl p-3 sm:right-14">
+                            <SiMongodb className="text-3xl absolute right-30 text-green-400 sm:text-5xl" />
                         </div>
-
                     </div>
-
                 </motion.div>
-
             </section>
 
+            <About />
         </div>
     );
 }
