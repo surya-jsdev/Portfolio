@@ -67,7 +67,7 @@ export default function Home() {
                         </button>
                     </div>
 
-                    <div className="mt-8 flex justify-center gap-5 text-2xl text-gray-200 sm:text-3xl lg:justify-start">
+                    <div className="mt-8 flex justify-center gap-5 text-2xl text-gray-200 sm:text-xl lg:justify-start">
                         <a href="#" className="transition hover:text-cyan-400" aria-label="GitHub">
                             <FaGithub />
                         </a>
@@ -83,33 +83,35 @@ export default function Home() {
                     transition={{ duration: 1 }}
                     className="relative flex w-full justify-center lg:w-1/2"
                 >
-                    <div className="relative flex items-center justify-center">
-                        <div className="absolute h-56 w-56 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 opacity-70 blur-3xl sm:h-72 sm:w-72"></div>
+                    <div className="relative flex w-full items-center justify-center">
+                        <div className="absolute h-52 w-52 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 opacity-70 blur-3xl sm:h-72 sm:w-72"></div>
 
-                        <img
-                            src={profileImage}
-                            alt="profile"
-                            className="relative h-64 w-64 rounded-full border-4 border-cyan-500 object-cover shadow-[0_0_35px_rgba(34,211,238,0.35)] sm:h-80 sm:w-80 lg:h-[500px] lg:w-[420px]"
-                        />
+                        <div className="relative">
+                            <img
+                                src={profileImage}
+                                alt="profile"
+                                className="relative h-64 w-64 rounded-full border-4 border-cyan-500 object-cover shadow-[0_0_35px_rgba(34,211,238,0.35)] sm:h-80 sm:w-80 lg:h-[420px] lg:w-[420px]"
+                            />
 
-                        <div className="glass absolute -left-2 top-8 rounded-xl p-3 sm:-left-6 sm:top-10">
-                            <SiReact className="text-3xl text-cyan-400 sm:text-5xl" />
-                        </div>
+                            <div className="glass absolute -left-2 top-6 rounded-xl p-2.5 sm:-left-6 sm:top-10 sm:p-3">
+                                <SiReact className="text-2xl text-cyan-400 sm:text-4xl lg:text-5xl" />
+                            </div>
 
-                        <div className="glass absolute right-0 top-10 rounded-xl p-3 sm:right-2">
-                            <SiAngular className="text-3xl text-red-500 sm:text-5xl" />
-                        </div>
+                            <div className="glass absolute right-0 top-8 rounded-xl p-2.5 sm:right-2 sm:top-10 sm:p-3">
+                                <SiAngular className="text-2xl text-red-500 sm:text-4xl lg:text-5xl" />
+                            </div>
 
-                        <div className="glass absolute -left-4 bottom-24 rounded-xl p-3 sm:-left-10 sm:bottom-28">
-                            <SiNodedotjs className="text-3xl text-green-500 sm:text-5xl" />
-                        </div>
+                            <div className="glass absolute -left-4 bottom-20 rounded-xl p-2.5 sm:-left-8 sm:bottom-24 sm:p-3">
+                                <SiNodedotjs className="text-2xl text-green-500 sm:text-4xl lg:text-5xl" />
+                            </div>
 
-                        <div className="glass absolute -right-2 bottom-24 rounded-xl p-3 sm:-right-8 sm:bottom-28">
-                            <SiTypescript className="text-3xl text-blue-500 sm:text-5xl" />
-                        </div>
+                            <div className="glass absolute -right-2 bottom-20 rounded-xl p-2.5 sm:-right-6 sm:bottom-24 sm:p-3">
+                                <SiTypescript className="text-2xl text-blue-500 sm:text-4xl lg:text-5xl" />
+                            </div>
 
-                        <div className=" absolute bottom-2 right-30 rounded-xl p-3 sm:right-14">
-                            <SiMongodb className="text-3xl absolute right-30 text-green-400 sm:text-5xl" />
+                            <div className="glass absolute bottom-1 right-2 rounded-xl p-2.5 sm:bottom-2 sm:right-4 sm:p-3">
+                                <SiMongodb className="text-2xl text-green-400 sm:text-4xl lg:text-5xl" />
+                            </div>
                         </div>
                     </div>
                 </motion.div>
