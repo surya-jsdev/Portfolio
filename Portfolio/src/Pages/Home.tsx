@@ -12,6 +12,7 @@ import About from "./About";
 import Skills from "./Skills";
 import Projects from "./Project";
 import resumePdf from "../assets/Surya_Dev.pdf";
+import Contact from "./Contact";
 
 const profileImage = new URL("../assets/Img_01.jpg", import.meta.url).href;
 const navItems = [
@@ -136,7 +137,7 @@ export default function Home() {
                             <img
                                 src={profileImage}
                                 alt="profile"
-                                className="relative h-64 w-64 rounded-full border-4 border-cyan-500 object-center shadow-[0_0_35px_rgba(34,211,238,0.35)] bg:center sm:h-80 sm:w-80 lg:h-[350px] lg:w-[300px]"
+                                className="relative h-64 w-64 rounded-full border-4 border-cyan-500 object-center shadow-[0_0_35px_rgba(34,211,238,0.35)] bg:center sm:h-80 sm:w-80 lg:h-[380px] lg:w-[360px]"
                             />
 
                             <div className="glass absolute -left-2 top-6 rounded-xl p-2.5 sm:-left-6 sm:top-10 sm:p-3">
@@ -155,7 +156,7 @@ export default function Home() {
                                 <SiTypescript className="text-2xl text-blue-500 sm:text-4xl lg:text-4xl" />
                             </div>
 
-                            <div className="glass absolute bottom-1 right-2 rounded-xl p-2.5 sm:bottom-2 sm:right-4 sm:p-3">
+                            <div className="glass absolute bottom-1 left-38 w-[60px]  rounded-xl p-2.5 sm:-bottom-5 sm:right-4 sm:p-3 ">
                                 <SiMongodb className="text-2xl text-green-400 sm:text-4xl  lg:text-4xl" />
                             </div>
                         </div>
@@ -170,6 +171,9 @@ export default function Home() {
 
             {/* Project Section */}
             <Projects />
+
+            {/* Contact Section */}
+            <Contact/>
         </div>
     );
 }
