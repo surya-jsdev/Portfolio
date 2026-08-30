@@ -9,6 +9,9 @@ import {
 } from "react-icons/si";
 import { motion } from "framer-motion";
 import About from "./About";
+import Skills from "./Skills";
+import Projects from "./Project";
+import resumePdf from "../assets/Surya_Dev.pdf";
 
 const profileImage = new URL("../assets/Img_01.jpg", import.meta.url).href;
 const navItems = [
@@ -96,12 +99,16 @@ export default function Home() {
                     </p>
 
                     <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
-                        <a href="#" className="flex items-center justify-center gap-2 rounded-xl bg-cyan-500 px-6 py-3 font-medium text-white transition hover:bg-cyan-600 sm:px-8">
+                        <a href="#projects" className="flex items-center justify-center gap-2 rounded-xl bg-cyan-500 px-6 py-3 font-medium text-white transition hover:bg-cyan-600 sm:px-8">
                             View Projects
                             <FaArrowRight />
                         </a>
 
-                        <a href="#" className="rounded-xl border border-cyan-400 px-6 py-3 font-medium text-cyan-300 transition hover:bg-cyan-500/10 sm:px-8">
+                        <a
+                            href={resumePdf}
+                            download="Surya_Dev.pdf"
+                            className="rounded-xl border border-cyan-400 px-6 py-3 font-medium text-cyan-300 transition hover:bg-cyan-500/10 sm:px-8"
+                        >
                             Download Resume
                         </a>
                     </div>
@@ -129,34 +136,40 @@ export default function Home() {
                             <img
                                 src={profileImage}
                                 alt="profile"
-                                className="relative h-64 w-64 rounded-full border-4 border-cyan-500 object-cover shadow-[0_0_35px_rgba(34,211,238,0.35)] sm:h-80 sm:w-80 lg:h-[420px] lg:w-[420px]"
+                                className="relative h-64 w-64 rounded-full border-4 border-cyan-500 object-center shadow-[0_0_35px_rgba(34,211,238,0.35)] bg:center sm:h-80 sm:w-80 lg:h-[350px] lg:w-[300px]"
                             />
 
                             <div className="glass absolute -left-2 top-6 rounded-xl p-2.5 sm:-left-6 sm:top-10 sm:p-3">
-                                <SiReact className="text-2xl text-cyan-400 sm:text-4xl lg:text-5xl" />
+                                <SiReact className="text-2xl text-cyan-400 sm:text-4xl lg:text-4xl" />
                             </div>
 
                             <div className="glass absolute right-0 top-8 rounded-xl p-2.5 sm:right-2 sm:top-10 sm:p-3">
-                                <SiAngular className="text-2xl text-red-500 sm:text-4xl lg:text-5xl" />
+                                <SiAngular className="text-2xl text-red-500 sm:text-4xl lg:text-4xl" />
                             </div>
 
                             <div className="glass absolute -left-4 bottom-20 rounded-xl p-2.5 sm:-left-8 sm:bottom-24 sm:p-3">
-                                <SiNodedotjs className="text-2xl text-green-500 sm:text-4xl lg:text-5xl" />
+                                <SiNodedotjs className="text-2xl text-green-500 sm:text-4xl lg:text-4xl" />
                             </div>
 
                             <div className="glass absolute -right-2 bottom-20 rounded-xl p-2.5 sm:-right-6 sm:bottom-24 sm:p-3">
-                                <SiTypescript className="text-2xl text-blue-500 sm:text-4xl lg:text-5xl" />
+                                <SiTypescript className="text-2xl text-blue-500 sm:text-4xl lg:text-4xl" />
                             </div>
 
                             <div className="glass absolute bottom-1 right-2 rounded-xl p-2.5 sm:bottom-2 sm:right-4 sm:p-3">
-                                <SiMongodb className="text-2xl text-green-400 sm:text-4xl lg:text-5xl" />
+                                <SiMongodb className="text-2xl text-green-400 sm:text-4xl  lg:text-4xl" />
                             </div>
                         </div>
                     </div>
                 </motion.div>
             </section>
 
+            {/* About section */}
             <About />
+            {/* Skills Section */}
+            <Skills />
+
+            {/* Project Section */}
+            <Projects />
         </div>
     );
 }
