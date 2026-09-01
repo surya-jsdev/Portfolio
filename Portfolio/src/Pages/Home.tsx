@@ -13,6 +13,7 @@ import Skills from "./Skills";
 import Projects from "./Project";
 import resumePdf from "../assets/Surya_Dev.pdf";
 import Contact from "./Contact";
+import Services from "./Services";
 
 const profileImage = new URL("../assets/Img_01.jpg", import.meta.url).href;
 const navItems = [
@@ -27,7 +28,7 @@ export default function Home() {
 
     return (
         <div className="min-h-screen bg-[#050816] text-white">
-            <nav className="fixed top-0 left-0 z-50 w-full border-b border-gray-800/80 bg-[#050816]/80 backdrop-blur-lg">
+            <nav className="fixed top-0 left-0 z-50 w-full border-b border-gray-800/80 bg-[#050816]/80 backdrop-blur-lg sm:w-full">
                 <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-4 sm:px-6 lg:px-8">
                     <a href="#home" className="text-xl font-bold text-cyan-400 sm:text-2xl">
                         {"</> Surya P"}
@@ -131,13 +132,13 @@ export default function Home() {
                     className="relative flex w-full justify-center lg:w-1/2"
                 >
                     <div className="relative flex w-full items-center justify-center">
-                        <div className="absolute h-52 w-52 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 opacity-70 blur-3xl sm:h-72 sm:w-72"></div>
+                        <div className="absolute h-52 w-52 rounded-full bg-linear-to-r from-cyan-500 to-purple-600 opacity-70 blur-3xl sm:h-72 sm:w-72"></div>
 
                         <div className="relative">
                             <img
                                 src={profileImage}
                                 alt="profile"
-                                className="relative h-64 w-64 rounded-full border-4 border-cyan-500 object-center shadow-[0_0_35px_rgba(34,211,238,0.35)] bg:center sm:h-80 sm:w-80 lg:h-[380px] lg:w-[360px]"
+                                className="relative h-64 w-64 rounded-full border-4 border-cyan-500 object-center shadow-[0_0_35px_rgba(34,211,238,0.35)] bg:center sm:h-80 sm:w-80 lg:h-90 lg:w-85"
                             />
 
                             <div className="glass absolute -left-2 top-6 rounded-xl p-2.5 sm:-left-6 sm:top-10 sm:p-3">
@@ -156,8 +157,8 @@ export default function Home() {
                                 <SiTypescript className="text-2xl text-blue-500 sm:text-4xl lg:text-4xl" />
                             </div>
 
-                            <div className="glass absolute bottom-1 left-38 w-[60px]  rounded-xl p-2.5 sm:-bottom-5 sm:right-4 sm:p-3 ">
-                                <SiMongodb className="text-2xl text-green-400 sm:text-4xl  lg:text-4xl" />
+                            <div className="glass absolute bottom-1 left-1/2 w-15 -translate-x-1/2 rounded-xl p-2.5 sm:-bottom-8 sm:left-auto sm:right-5 sm:translate-x-0  lg:left-38">
+                                <SiMongodb className="text-2xl text-green-400 sm:text-4xl lg:text-4xl" />
                             </div>
                         </div>
                     </div>
@@ -168,12 +169,13 @@ export default function Home() {
             <About />
             {/* Skills Section */}
             <Skills />
-
+            {/* Services Section */}
+            <Services />
             {/* Project Section */}
             <Projects />
 
             {/* Contact Section */}
-            <Contact/>
+            <Contact />
         </div>
     );
 }
